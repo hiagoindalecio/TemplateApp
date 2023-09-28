@@ -88,7 +88,7 @@ No prompt de comando será gerado um *IP* de conexão e um *QR code* que pode se
 **5. Instalação do Expo Go**
 <br />
 O aplicativo móvel está disponível através do [site oficial](https://expo.dev/client) ou então através das lojas de aplicativos de cada sistema operacional, como [Google Play](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=pt_BR&gl=US) para o Android por exemplo.
-Uma vez instalado, certifique-se de que o dispositívo móvel está conectado na mesma reque que o dispositivo rodando o servidor de desenvolvimento e utilize o aplicativo para escanear o *QR code* gerado no passo anterior, uma vez escaneado, a aplicação será montada no dispositivo móvel e a partir deste momento qualquer alteração feita na aplicação através do VS Code refletirá instantaneamente.
+Uma vez instalado, certifique-se de que o dispositívo móvel está conectado na mesma rede que o dispositivo rodando o servidor de desenvolvimento e utilize o aplicativo para escanear o *QR code* gerado no passo anterior, uma vez escaneado, a aplicação será montada no dispositivo móvel e a partir deste momento qualquer alteração feita na aplicação através do VS Code refletirá instantaneamente.
 <br />
 <img src="https://static.expo.dev/static/images/client/expo-go-android.avif" alt="Expo Go" style="height:350px;"/>
 <br />
