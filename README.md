@@ -1,79 +1,83 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-# Getting Started
+# Tutorial básico React Native
+Este é um tutorial exemplificado de como inicializar o desenvolvimento de uma aplicação mobile utilizando o [React Native](https://reactnative.dev), o [typescript](https://www.typescriptlang.org) e o [yarn](https://yarnpkg.com) como gerenciador de pacotes.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+# Introdução 
+Primeiramente, é necessária um breve introdução das ferramentas que serão utilizadas durante o desenrolar do tutorial, para o bom entendimento do processo e facilitação do aperfeiçoamento dos conhecimentos que serão  obtidos aqui.
 
-## Step 1: Start the Metro Server
+## Node.js
+O [Node.js](https://nodejs.org/pt-br) é um *runtime* JavaScript desenvolvido com o [Chrome's V8 JavaScript engine](https://v8.dev/), que basicamente serve para executar códigos JavaScript fora de um navegador web de forma assíncrona, tendo sua arquitetura orientada por eventos.
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## VisualStudio Code
+O [VisualStudio Code](https://code.visualstudio.com) é um poderoso editor de código fonte que vem com suporte integrado para JavaScript, TypeScript e Node.js, além de um rico ecosistema de extensões das mais variadas.
 
-To start Metro, run the following command from the _root_ of your React Native project:
+## React Native
+O [React Native](https://reactnative.dev) é uma biblioteca JavaScript criada pelo Facebook, usada para desenvolver aplicativos móveis para os sistemas Android e iOS de forma nativa, não havendo a necessidade do desenvolvimento dedicado à um sistema operacional específico, já que o código JavaScript é renderizado como código nativo pela biblioteca.
 
-```bash
-# using npm
-npm start
+## Yarn
+O [Yarn](https://yarnpkg.com), criado pelo Facebook, é um estável gerenciador de pacotes análogo ao [npm](https://www.npmjs.com), gerenciador de pacotes padrão do [Node.js](https://nodejs.org/pt-br). O [Yarn](https://yarnpkg.com) é utilizado no gerenciamento de dependências de projetos JavaScript e dá assistência à instalação, atualização, configuração e remoção de pacotes, sendo considerado mais rápido e seguro que o [npm](https://www.npmjs.com) pela comunidade de desenvolvedores que utilizam a tecnologia.
 
-# OR using Yarn
-yarn start
-```
+## Typescript
+O [Typescript](https://www.typescriptlang.org) é basicamente JavaScript, porém com sintaxe para torna-lo fortemente tipado. O [Typescript](https://www.typescriptlang.org) é altamente recomendado à desenvolvedores JavaScript iniciantes, pois permite uma melhor percepção do código em tempo de desenvolvimento e evita a ocorrência de erros na utilização de ferramentas por conta da tipagem.
 
-## Step 2: Start your Application
+## npx
+O [npx](https://docs.npmjs.com/cli/v7/commands/npx) (Node Package eXecute) é um executante de pacotes node locais ou remotos.
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+## Expo Go
+O [Expo Go](https://expo.dev/client) serve para rodar aplicações em servidores de desenvolvimento em dispositivos móveis através da rede de forma rápida.
+[Post recomendado](https://blog.rocketseat.com.br/expo-react-native/)
 
-### For Android
+# Passo-a-passo
+ **1. Instalação do Node.js**
+Antes de qualquer coisa, será necessário realizar a instalação do Node.js na máquina. O arquivo instalador pode ser obtido diretamente no [site oficial](https://nodejs.org/pt-br) da ferramenta.
+![Botão de instalação do Node.js no site oficial](https://github.com/hiagoindalecio/TemplateApp/blob/main/Node.png?raw=true)
+Recomento a instalação da versão recomendada para evitar a ocorrência de erros.
 
-```bash
-# using npm
-npm run android
+**2. Instalação do VisualStudio Code**
+É possível a instalação através do [site oficial](https://code.visualstudio.com) da ferramenta, o botão de instalação virá pré-definido de acordo com seu sistema operacional:
+![enter image description here](https://github.com/hiagoindalecio/TemplateApp/blob/main/VsCode.png?raw=true)
 
-# OR using Yarn
-yarn android
-```
+**3. Instalação do Yarn de forma global**
+Abra o prompt de comando como administrador e execute o seguinte comando para que o Yarn será instalado de forma global na máquina:
+> npm install --global yarn
 
-### For iOS
+**4. Inicialização e configuração da aplicação**
+Abra o prompt de comando no diretório em que deseja gravar sua aplicação e execute o seguinte comando npx instalando todos os pacotes mandatórios:
+> npx react-native init NomeDaAplicacao --template react-native-template-typescript
 
-```bash
-# using npm
-npm run ios
+O comando acima executará a inicialização automática de uma aplicação React Native, utilizando um *template* que já tem o Yarn configurado. Assim que finalizado o processo de inicialização, acesse o diretório da aplicação através do comando:
+> cd NomeDaAplicacao
 
-# OR using Yarn
-yarn ios
-```
+Em seguida, utilize o atalho do VisualStudio Code para abrir o fonte da aplicação:
+> code .
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+No VS Code será possível explorar toda a arquitetura de códigos da aplicação, o arquivo principal gerado pelo template é o "App.tsx" (a extensão "tsx" indica um arquivo typescript).
+![enter image description here](https://github.com/hiagoindalecio/TemplateApp/blob/main/OpenVSCode.png?raw=true)
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+No VS Code, através do atalho *ctrl + "* é possível a abertura do prompt de comando, então, no prompt de comando execute o comando de atualização de pacotes por precaução:
+> yarn
 
-## Step 3: Modifying your App
+Certifique-se de que o pacote Expo está instalado e atualizado:
+> yarn add expo
 
-Now that you have successfully run the app, let's modify it.
+Inicie o servidor de desenvolvimento através do pacote do Expo:
+> yarn expo start
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+Obs: A inicialização pode ser facilitada ajustando o *script* "start" (package.json) desta maneira:
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+    {  
+	  "scripts": {  
+		"start": "expo start"  
+	  } 
+    }
 
-## Congratulations! :tada:
+Então através deste comando, o servidor de desenvolvimento será inicializado:
+> yarn start
 
-You've successfully run and modified your React Native App. :partying_face:
+No prompt de comando será gerado um *IP* de conexão e um *QR code* que pode ser utilizado para a conexão rápida.
+[Documentação recomendada](https://reactnative.dev/docs/environment-setup?package-manager=yarn)
 
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+**5. Instalação do Expo Go**
+O aplicativo móvel está disponível através do [site oficial](https://expo.dev/client) ou então através das lojas de aplicativos de cada sistema operacional, como [Google Play](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=pt_BR&gl=US) para o Android por exemplo.
+Uma vez instalado, utilize o aplicativo para escanear o *QR code* gerado no passo anterior, uma vez escaneado, a aplicação será montada no dispositivo móvel, a partir deste momento, qualquer alteração feita na aplicação através do VS Code, refletirá instantaneamente.
+![enter image description here](https://static.expo.dev/static/images/client/expo-go-android.avif)
