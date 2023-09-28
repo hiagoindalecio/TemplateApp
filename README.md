@@ -29,6 +29,7 @@ O [Expo Go](https://expo.dev/client) serve para rodar aplicações em servidores
 
 # Passo-a-passo
  **1. Instalação do Node.js**
+ <br />
 Antes de qualquer coisa, será necessário realizar a instalação do Node.js na máquina. O arquivo instalador pode ser obtido diretamente no [site oficial](https://nodejs.org/pt-br) da ferramenta.
 <br />
 ![Botão de instalação do Node.js no site oficial](https://github.com/hiagoindalecio/TemplateApp/blob/main/Node.png?raw=true)
@@ -36,15 +37,18 @@ Antes de qualquer coisa, será necessário realizar a instalação do Node.js na
 Recomento a instalação da versão recomendada para evitar a ocorrência de erros.
 
 **2. Instalação do VisualStudio Code**
+<br />
 É possível a instalação através do [site oficial](https://code.visualstudio.com) da ferramenta, o botão de instalação virá pré-definido de acordo com seu sistema operacional:
 <br />
 ![Botão de instalação do VisualStudio Code no site oficial](https://github.com/hiagoindalecio/TemplateApp/blob/main/VsCode.png?raw=true)
 <br />
 **3. Instalação do Yarn de forma global**
+<br />
 Abra o prompt de comando como administrador e execute o seguinte comando para que o Yarn será instalado de forma global na máquina:
 > npm install --global yarn
 
 **4. Inicialização e configuração da aplicação**
+<br />
 Abra o prompt de comando no diretório em que deseja gravar sua aplicação e execute o seguinte comando npx instalando todos os pacotes mandatórios:
 > npx react-native init NomeDaAplicacao --template react-native-template-typescript
 
@@ -82,6 +86,7 @@ No prompt de comando será gerado um *IP* de conexão e um *QR code* que pode se
 [Documentação recomendada](https://reactnative.dev/docs/environment-setup?package-manager=yarn)
 
 **5. Instalação do Expo Go**
+<br />
 O aplicativo móvel está disponível através do [site oficial](https://expo.dev/client) ou então através das lojas de aplicativos de cada sistema operacional, como [Google Play](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=pt_BR&gl=US) para o Android por exemplo.
 Uma vez instalado, utilize o aplicativo para escanear o *QR code* gerado no passo anterior, uma vez escaneado, a aplicação será montada no dispositivo móvel, a partir deste momento, qualquer alteração feita na aplicação através do VS Code, refletirá instantaneamente.
 <br />
